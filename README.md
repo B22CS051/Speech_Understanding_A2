@@ -144,5 +144,3 @@ For final submission/report, document:
 
 ---
 
-Last updated: April 2026  
-Status: Running pipeline verified on CPU
