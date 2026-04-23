@@ -1,0 +1,6 @@
+{
+  "attack_type": "gaussian_small_perturbation",
+  "epsilon_estimate": 0.001,
+  "snr_db": 28.913355715108352,
+  "target_language_flip": "Hindi -> English"
+}

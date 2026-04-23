@@ -1,0 +1,10 @@
+{
+  "reference_prediction": {
+    "label": "Bona Fide",
+    "confidence": 0.5327274799346924
+  },
+  "synth_prediction": {
+    "label": "Bona Fide",
+    "confidence": 0.5335984826087952
+  }
+}
