@@ -6,14 +6,11 @@ Python + PyTorch implementation for code-switched lecture processing:
 - Part III: Voice cloning style synthesis (22.05 kHz output)
 - Part IV: Anti-spoofing + adversarial robustness report outputs
 
-## Current Status
+##  Status
 
 This repository includes a working end-to-end pipeline that runs on CPU and generates:
 - `outputs/output_LRL_cloned.wav`
-- assignment-style JSON artifacts for all 4 parts
-
-The target low-resource language in the current implementation is:
-- **Santhali**
+-  JSON artifacts for all 4 parts
 
 ## Project Layout
 
@@ -66,11 +63,6 @@ Default run:
 python pipeline.py
 ```
 
-Custom input paths:
-
-```bash
-python pipeline.py --audio "d:/Sem 8/SU/B22CS051_PA1/original_segment.wav" --ref "d:/Sem 8/SU/B22CS051_PA1/student_voice_ref.wav"
-```
 
 ## Pipeline Flow (Implemented)
 
@@ -112,35 +104,11 @@ outputs/
 └── output_LRL_cloned.wav
 ```
 
-## Notes on Santhali Output
+## Notes on Output
 
 - Translator is dictionary-based (Hinglish -> Santhali-like tokens).
 - Pipeline includes a fallback to ensure synthesized text remains Santhali-leaning.
-- You can expand `src/translator.py` dictionary for better lexical coverage.
+- expand `src/translator.py` dictionary for better lexical coverage.
 
-## Quick Troubleshooting
 
-- `UnicodeEncodeError` on Windows terminal:
-  - fixed in current code by using ASCII logs.
-
-- Silent/very low audio:
-  - fixed in `src/tts_module.py` (audible range + envelope + normalization).
-
-- Whisper not installed:
-  ```bash
-  pip install openai-whisper
-  ```
-
-- Missing audio file:
-  - verify `original_segment.wav` and `student_voice_ref.wav` paths.
-
-## Important Academic Note
-
-This repository is intended for assignment implementation and experimentation.  
-For final submission/report, document:
-- your custom design choices,
-- module limitations,
-- evaluation methodology and results from generated JSON files.
-
----
 
